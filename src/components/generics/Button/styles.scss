@@ -1,0 +1,60 @@
+@import '@/sass/master';
+
+.buttonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: $rounded;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: $space-xxsmall;
+  transition: $transition-default;
+
+  > span {
+    @include flexbox(row, center, center, $space-tiny);
+  }
+
+  background-color: $red-default;
+  color: $pure-white;
+
+  &:hover {
+    background-color: $red-dark;
+  }
+
+  &:active {
+    box-shadow: $shadow-light;
+  }
+
+  &.minimal {
+    width: fit-content;
+    background: none;
+    color: $darkgray;
+    padding: 0;
+    text-transform: none;
+    font-weight: $font-normal;
+    transition: $transition-fast;
+
+    &:hover {
+      background: none;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+
+  &.fullwidth {
+    width: 100%;
+  }
+
+  &:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+  }
+}

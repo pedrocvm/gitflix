@@ -1,0 +1,35 @@
+@import '@/sass/master';
+
+.autocompleteWrapper {
+  position: relative;
+
+  .suggestionsWrapper {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: $z-menu;
+    border-radius: $rounded;
+    background-color: $pure-white;
+    border: 0.1rem solid $lightgray;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-shadow: $shadow-light;
+    overflow: auto;
+    margin-top: 0.1rem;
+    max-height: 10rem;
+
+    .suggestionItem {
+      padding: $space-tiny;
+      cursor: pointer;
+      transition: $transition-default;
+      font-size: $font-small;
+      color: $darkgray;
+
+      &:hover {
+        background-color: $lightgray;
+        color: $darkgray;
+      }
+    }
+  }
+}

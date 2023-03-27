@@ -1,3 +1,7 @@
 {
-  "pluginsFile": "tests/e2e/plugins/index.js"
+  "pluginsFile": "tests/e2e/plugins/index.js",
+  "viewportWidth": 1600,
+  "viewportHeight": 1200,
+  "video": false,
+  "screenshotOnRunFailure": false
 }

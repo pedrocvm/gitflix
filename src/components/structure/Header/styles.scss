@@ -1,0 +1,20 @@
+@import '@/sass/master';
+
+.headerWrapper {
+  background-color: $red-default;
+  color: $white;
+  height: 4rem;
+  padding: 0 4rem;
+  @include flexbox(row, center);
+
+  .logoWrapper {
+    width: fit-content;
+    margin-right: $space-medium;
+    height: 100%;
+
+    > a {
+      height: 100%;
+      @include flexbox(row, center);
+    }
+  }
+}

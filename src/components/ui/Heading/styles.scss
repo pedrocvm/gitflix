@@ -1,0 +1,8 @@
+@import '@/sass/master';
+
+.headingWrapper {
+  border-left: 0.5rem solid $red-default;
+  padding-left: $space-tiny;
+  font-size: $font-xlarge;
+  font-weight: $font-bold;
+}

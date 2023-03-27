@@ -1,0 +1,17 @@
+@import '@/sass/master';
+
+.iconWrapper {
+  > i {
+    &.small {
+      font-size: 0.8rem;
+    }
+
+    &.medium {
+      font-size: 1.2rem;
+    }
+
+    &.large {
+      font-size: 1.6rem;
+    }
+  }
+}

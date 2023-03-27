@@ -1,0 +1,50 @@
+@import '@/sass/master';
+
+.dropdownWrapper {
+  position: relative;
+  display: inline-block;
+
+  .dropdown-content {
+    position: absolute;
+    left: -10.5rem;
+    top: $space-xlarge;
+    background-color: $white;
+    min-width: 13rem;
+    overflow: auto;
+    box-shadow: $shadow-default;
+    z-index: $z-menu;
+    border-radius: $rounded;
+
+    > * {
+      width: 100%;
+      border-radius: 0;
+      @include flexbox(row, center, flex-start);
+      padding: $space-xxsmall;
+      transition: $transition-default;
+      font-size: $font-xsmall;
+
+      &:hover {
+        background-color: $lightgray;
+      }
+
+      &:last-child {
+        border-top: 0.1rem solid $lightgray;
+      }
+
+      i {
+        font-size: $font-xsmall;
+      }
+    }
+  }
+
+  .fade-translate-enter-active,
+  .fade-translate-leave-active {
+    transition: $transition-default;
+  }
+
+  .fade-translate-enter,
+  .fade-translate-leave-to {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+}

@@ -1,0 +1,64 @@
+@import '@/sass/master';
+
+.textFieldWrapper {
+  width: 100%;
+
+  > label {
+    position: relative;
+    width: 100%;
+
+    .labelText {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      transition: $transition-default;
+      transform-origin: 0% 0%;
+      padding: 0 $space-tiny;
+      color: $midgray;
+    }
+
+    > input {
+      width: 100%;
+      padding: $space-tiny;
+      border: 0.1rem solid $midgray;
+      outline: none;
+      transition: $transition-default;
+      font-size: $font-medium;
+      border-radius: $rounded;
+
+      &:focus,
+      &:hover {
+        border-color: $green-default;
+      }
+
+      &.inputPassword {
+        padding-right: $space-large;
+      }
+
+      &:disabled {
+        background-color: $lightgray;
+        border-color: $midgray;
+        cursor: not-allowed;
+        color: $midgray;
+      }
+    }
+
+    > button {
+      position: absolute;
+      top: 0;
+      right: $space-xxsmall;
+    }
+  }
+
+  &.active {
+    .labelText {
+      transform: translateY(-$space-small) scale(0.8);
+      padding: 0;
+      color: $green-default;
+    }
+
+    input {
+      border-color: $green-default;
+    }
+  }
+}

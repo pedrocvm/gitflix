@@ -1,0 +1,15 @@
+@import '@/sass/master';
+
+.footerWrapper {
+  background-color: $black;
+  color: $white;
+  height: 3rem;
+  padding: 0 $space-xxlarge;
+  font-size: $font-xsmall;
+  @include flexbox(row, center, flex-end, 0.25rem);
+
+  > a {
+    color: $red-default;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,5 @@
+@import '@/sass/master';
+
+.repositoryCardInfoWrapper {
+  @include flexbox(row, center, unset, $space-tiny);
+}

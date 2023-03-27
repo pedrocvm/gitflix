@@ -1,0 +1,41 @@
+@import '@/sass/master';
+
+.sliderWrapper {
+  position: relative;
+  @include flexbox(row, center, center);
+  max-width: 100%;
+  width: fit-content;
+
+  > button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: $z-base;
+
+    &:active {
+      transform: translateY(-50%);
+    }
+
+    &.arrowLeft {
+      left: -$space-medium;
+    }
+
+    &.arrowRight {
+      right: -$space-medium;
+    }
+  }
+
+  .sliderContent {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: $space-tiny;
+
+    & > * {
+      height: fit-content;
+      scroll-snap-align: start;
+      margin: $space-tiny;
+    }
+  }
+}

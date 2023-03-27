@@ -1,0 +1,44 @@
+@import '@/sass/master';
+
+.repositoryCardWrapper {
+  @include flexbox(column, unset, space-between);
+  gap: $space-xsmall;
+  width: 20rem;
+  height: 15.5rem;
+
+  .cardHeader {
+    @include flexbox(row, center, space-between);
+    font-size: $font-large;
+    text-transform: capitalize;
+
+    .bookmark {
+      color: $orange-default;
+    }
+  }
+
+  .cardInfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-xxsmall;
+  }
+
+  .cardFooter {
+    @include flexbox(row, center, space-between);
+
+    > a {
+      text-decoration: none;
+      color: $red-default;
+      font-size: $font-small;
+      transition: $transition-default;
+
+      &:hover {
+        color: $red-dark;
+      }
+
+      > img {
+        width: 3rem;
+        border-radius: $rounded-full;
+      }
+    }
+  }
+}

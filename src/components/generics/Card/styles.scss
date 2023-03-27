@@ -1,0 +1,14 @@
+@import '@/sass/master';
+
+.cardWrapper {
+  background-color: $pure-white;
+  border-radius: $rounded;
+  box-shadow: $shadow-light;
+  padding: $space-xxsmall;
+  transition: $transition-default;
+  width: fit-content;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

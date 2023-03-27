@@ -30,10 +30,8 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.tsx",
     "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "tests/**/*.ts", "tests/e2e/support/commands.js", "tests/e2e/support/index.js", "tests/e2e/specs/auth.cy.js",
   ],
   "exclude": [
     "node_modules"

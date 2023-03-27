@@ -1,0 +1,51 @@
+@import '@/sass/master';
+
+.toastNotificationWrapper {
+  position: fixed;
+  top: 5rem;
+  right: 1rem;
+  background-color: white;
+  padding: 1rem;
+  z-index: $z-alwaysOnTop;
+  width: max-content;
+  min-width: 20rem;
+  border-radius: $rounded-sm;
+  overflow: hidden;
+  box-shadow: $shadow-light;
+
+  &.toast-success {
+    color: $green-default;
+    background-color: $green-light;
+  }
+
+  &.toast-error {
+    color: $red-default;
+    background-color: $red-light;
+  }
+}
+
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  transition: width $transition-default;
+
+  &-success {
+    background-color: $green-dark;
+  }
+
+  &-error {
+    background-color: $red-dark;
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity $transition-default;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}

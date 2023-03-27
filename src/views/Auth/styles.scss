@@ -1,0 +1,94 @@
+@import '@/sass/master';
+
+.authWrapper {
+  @include flexbox(column, flex-start, center, $space-small);
+  background-color: $pure-white;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: $space-small;
+  border-radius: $rounded-lg;
+  box-shadow: $shadow-default;
+
+  .formControl {
+    width: 100%;
+    @include flexbox(column, center, center, $space-small);
+
+    > div {
+      width: 100%;
+    }
+
+    .formFieldWrapper {
+      width: 100%;
+      @include flexbox(column, center, center, $space-small);
+    }
+
+    .actionWrapper {
+      width: 100%;
+      @include flexbox(column, center, center, $space-tiny);
+
+      .toggleFormButton {
+        font-size: $font-small;
+        color: $darkgray;
+        @include flexbox(row, center, center, 0.3rem);
+
+        > button {
+          font-size: $font-small;
+          color: $red-default;
+          transition: $transition-default;
+
+          &:hover {
+            color: $red-dark;
+          }
+        }
+      }
+
+      .forgotMyPassword {
+        > button {
+          font-size: $font-small;
+          color: $darkgray;
+          transition: $transition-default;
+
+          &:hover {
+            color: $red-default;
+          }
+        }
+      }
+    }
+
+    .socialLogin {
+      width: 100%;
+      margin-top: $space-medium;
+      @include flexbox(column, center, center, $space-xxsmall);
+
+      > div {
+        width: 100%;
+      }
+
+      button {
+        border-radius: $rounded;
+        border: 0.1rem solid $midgray;
+        padding: $space-tiny;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .googleButton {
+        > button {
+          background-color: $blue;
+          color: $white;
+          border-color: $blue;
+        }
+      }
+
+      .githubButton {
+        > button {
+          background-color: $black;
+          color: $white;
+          border-color: $black;
+        }
+      }
+    }
+  }
+}

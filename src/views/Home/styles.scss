@@ -1,0 +1,16 @@
+@import '@/sass/master';
+
+.homeWrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+  @include flexbox(column, center, center, $space-medium);
+
+  .bookmarkSection,
+  .mostPopularSection {
+    width: 100%;
+  }
+
+  .filterWrapper {
+    @include flexbox(row, center, space-between);
+  }
+}

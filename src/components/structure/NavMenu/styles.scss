@@ -1,0 +1,56 @@
+@import '@/sass/master';
+
+.navMenuWrapper {
+  flex-grow: 1;
+  @include flexbox(row, center, space-between);
+
+  .navItemsWrapper {
+    @include flexbox(row, center, center, $space-small);
+
+    > a {
+      text-decoration: none;
+      color: $white;
+      font-weight: $font-bold;
+      font-size: $font-small;
+      transition: $transition-default;
+      color: $pure-white;
+    }
+
+    .router-link-active {
+      font-size: $font-medium;
+      color: $darkgray
+    }
+  }
+
+  .actionWrapper {
+    @include flexbox(row, center, flex-end, $space-xsmall);
+    position: relative;
+    color: $pure-white;
+    font-weight: $font-bold;
+    font-size: $font-small;
+
+    a {
+      @include flexbox(row, center, flex-start, $space-tiny);
+      text-decoration: none;
+      color: $darkgray;
+      font-size: $font-xsmall;
+      font-weight: $font-normal;
+    }
+
+    > button {
+      background: none;
+      text-transform: none;
+      width: fit-content;
+      padding: 0;
+
+      &:hover {
+        background: none;
+        color: $midgray;
+      }
+
+      &:active {
+        transform: none;
+      }
+    }
+  }
+}

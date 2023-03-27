@@ -1,0 +1,20 @@
+@import '@/sass/master';
+
+.myProfileWrapper {
+  @include flexbox(column, flex-start, center, $space-large);
+  background-color: $pure-white;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: $space-small;
+  border-radius: $rounded-lg;
+  box-shadow: $shadow-default;
+
+  .formControl {
+    width: 100%;
+    @include flexbox(column, center, center, $space-small);
+
+    > div {
+      width: 100%;
+    }
+  }
+}
